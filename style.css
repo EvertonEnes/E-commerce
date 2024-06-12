@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cabecalho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 15rem;
+    border-bottom: 1px solid #ccc ;
+}
+
+.cabecalho-inicio{
+    display: flex;
+    gap: 8rem;
+    height: 100%;
+}
+
+.cabecalho-inicio h1{
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+}
+
+.menu{
+    display: flex;
+    gap: 6rem;
+    list-style: none;
+    align-items: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #9e9a9a;
+}
+
+.menu li{
+    display: flex;
+    align-items: center;
+    height: 98%;
+}
+
+.menu li:hover{
+    color: black;
+    transition-duration: 0.2s;
+    border-bottom: 0.5rem solid hsl(26, 100%, 55%);
+}
+
+.cabecalho-final{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.img-avatar{
+    width: 5.5rem;
+}
+
+main{
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 100px;
+}
+
+.container-imagens{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-produto{
+    width: 40rem;
+}
