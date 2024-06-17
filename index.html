@@ -10,51 +10,78 @@
 
 </head>
 <body>
+    <div class="modal">
+      <div class="background-modal"></div>
+      <div class="container-imagens">
+        <img class="btnClose" src="images/icon-close.svg" alt="">
+        <div class="produto-principal produto-modal">
+          <img id="img-principal-modal" src="images/image-product-1.jpg" alt="">
+        </div>
+        <div class="img-miniatura">
+          <img src="images/image-product-1.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-1.jpg')">
+          <img src="images/image-product-2.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-2.jpg')">
+          <img src="images/image-product-3.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-3.jpg')">
+          <img src="images/image-product-4.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-4.jpg')">
+        </div>
+      </div>
+    </div>
+    <div class="container-carrinho">
+      <p class="titulo-carrinho">Carrinho</p>
+      <div class="carrinho">
+        <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+      </div>
+    </div>
     <header>
       <div class="cabecalho">
         <div class="cabecalho-inicio">
-          <h1 class="logo">sneakers</h1>
+          <img class="logo" src="images/logo.svg" alt="">
           <ul class="menu">
-            <li>Collections</li>
-            <li>Men</li>
-            <li>Women</li>
-            <li>About</li>
-            <li>Contact</li>
+            <li><p>Collections</p></li>
+            <li><p>Men</p></li>
+            <li><p>Women</p></li>
+            <li><p>About</p></li>
+            <li><p>Contact</p></li>
           </ul>
         </div>
         <div class="cabecalho-final">
-          <img class="carrinho" src="images/icon-cart.svg" alt="carrinho">
+          <img class="icone-carrinho" src="images/icon-cart.svg" alt="carrinho">
           <img class="img-avatar" src="images/image-avatar.png" alt="Perfil">
         </div>
       </div>
     </header>
     <main>
       <div class="container-imagens">
-        <img class="img-produto" src="images/image-product-1.jpg" alt="">
-        <img class="img-produto" src="images/image-product-2.jpg" alt="">
-        <img class="img-produto" src="images/image-product-3.jpg" alt="">
-        <img class="img-produto" src="images/image-product-4.jpg" alt="">
+        <div class="produto-principal">
+          <img id="img-principal" src="images/image-product-1.jpg" alt="">
+        </div>
+        <div class="img-miniatura">
+          <img src="images/image-product-1.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-1.jpg')">
+          <img src="images/image-product-2.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-2.jpg')">
+          <img src="images/image-product-3.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-3.jpg')">
+          <img src="images/image-product-4.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-4.jpg')">
+        </div>
       </div>
-      <div>
-        <p>Sneaker Company</p>
-        <h1>Fall Limited Edition Sneakers</h1>
-        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="container-text">
+        <div class="container-info">
+          <section>
+            <p>Sneaker Company</p>
+            <h1>Tênis de edição limitada de outono</h1>
+          </section>
+          <p class="info-produto">Estes tênis de baixo perfil são o companheiro perfeito para uso casual. Apresentando uma sola externa de borracha durável, eles resistirão a tudo o que o clima pode oferecer.</p>
+          <p class="valor-produto">R$125.00 <span>50%</span></p>
+          <p class="val-promo">R$250</p>
+          <div class="container-qtd">
+            <div>
+              <img class="menos" src="images/icon-minus.svg" alt="">
+              <p class="quantidade"> 0 </p>
+              <img class="mais" src="images/icon-plus.svg" alt="">
+            </div>
+            <button class="btn-add"><img src="images/icon-cart2.svg" alt=""><span>Adicionar ao carrinho</span></button>
+            </div>
+        </div>
       </div>
     </main>
-  
-
-  <!-- Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart -->
 </body>
+
+<script src="index.js"></script>
 </html>

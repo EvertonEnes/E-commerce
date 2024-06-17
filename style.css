@@ -11,6 +11,7 @@ html{
 
 body{
     font-family: "Kumbh Sans", sans-serif;
+    position: relative;
 }
 
 header{
@@ -32,22 +33,56 @@ header{
     display: flex;
     gap: 8rem;
     height: 100%;
+    align-items: center;
 }
 
-.cabecalho-inicio h1{
+.icone-carrinho{
+    cursor: pointer;
+}
+
+.img-produto-carrinho{
+    width: 70px;
+}
+
+.container-carrinho{
+    display: none;
+    position: absolute;
+    right: 8%;
+    top: 14%;
+    width: 30rem;
+    height: 20rem;
+    background: white;
+    border-radius: 10px;
+    filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.2));
+}
+
+.container-carrinho2{
+    display: block;
+}
+
+.carrinho{
     display: flex;
     align-items: center;
-    font-size: 3.5rem;
+    justify-content: center;
+    height: 70%;
+    font-size: 13px;
+}
+
+.titulo-carrinho{
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 1px solid #ccc;
 }
 
 .menu{
     display: flex;
     gap: 6rem;
+    height: 95%;
     list-style: none;
-    align-items: center;
+    margin-top: 5px;
     font-size: 1.8rem;
     cursor: pointer;
-    color: #9e9a9a;
+    color: #8a8484;
 }
 
 .menu li{
@@ -73,11 +108,23 @@ header{
 }
 
 main{
-    margin-top: 100px;
+    margin-top: 10rem;
     display: flex;
     width: 100%;
     justify-content: center;
-    gap: 100px;
+    gap: 12rem;
+}
+
+.produto-principal{
+    width: 46rem;
+    height: 46rem;
+}
+
+.produto-principal img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.3rem;
+    cursor: pointer;
 }
 
 .container-imagens{
@@ -85,6 +132,156 @@ main{
     flex-direction: column;
 }
 
-.img-produto{
-    width: 40rem;
+.img-miniatura{
+    display: flex;
+    justify-content: space-between;
+}
+    
+.img-miniatura img{
+    width: 10rem;
+    border-radius: 1.3rem;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+.modal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+    
+.background-modal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    opacity: 0.7;
+    z-index: 8;
+}
+        
+.modal .container-imagens{
+    max-width: 70rem;
+    z-index: 9;
+    position: relative;
+}
+
+.container-imagens > img{
+    width: 2rem;
+    position: absolute;
+    right: 0;
+    top: -3rem;
+    cursor: pointer;
+}
+
+.produto-modal{
+    width: 55rem;
+    height: 55rem;
+}
+
+.container-text{
+    width: 50rem;
+}
+
+.container-info{
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: 2.8rem;
+}
+
+.container-info section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.container-text p:first-child{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #8a8484;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.info-produto{
+    font-size: 1.8rem;
+}
+
+.container-text h1{
+    font-size: 4rem;
+}
+
+.valor-produto{
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.valor-produto span{
+    color: #fff;
+    font-weight: 600;
+    margin-left: 1rem;
+    background: #000;
+    border-radius: 0.5rem;
+    padding: 0px 1rem;
+    font-size: 2rem;
+}
+
+.val-promo{
+    margin-top: -1.2rem;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-decoration: line-through;
+}
+
+.container-qtd{
+    display: flex;
+    gap: 2rem;
+}
+
+.container-qtd div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    padding: 2rem 0rem;
+    gap: 4.3rem;
+    background: #f1f0f0;
+    border-radius: 1rem;
+}
+
+.quantidade{
+    text-align: center;
+    border: none;
+    width: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    background: #f1f0f0;
+}
+
+.mais{
+    width: 1.7rem;
+    cursor: pointer;
+}
+
+.menos{
+    cursor: pointer;
+    width: 1.7rem;
+    height: 0.5rem;
+}
+
+.btn-add{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0rem 2rem;
+    font-size: 1.7rem;
+    border-radius: 1rem;
+    border: none;
+    background: #ff7d1b;
+    cursor: pointer;
+    font-weight: 600;
 }
