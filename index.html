@@ -29,6 +29,7 @@
       <p class="titulo-carrinho">Carrinho</p>
       <div class="carrinho">
         <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+        <div class="carrinho-filho"></div>
       </div>
     </div>
     <header>
@@ -54,11 +55,11 @@
         <div class="produto-principal">
           <img id="img-principal" src="images/image-product-1.jpg" alt="">
         </div>
-        <div class="img-miniatura">
-          <img src="images/image-product-1.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-1.jpg')">
-          <img src="images/image-product-2.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-2.jpg')">
-          <img src="images/image-product-3.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-3.jpg')">
-          <img src="images/image-product-4.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-4.jpg')">
+        <div id="img-miniatura-principal" class="img-miniatura">
+          <img class="img1" src="images/image-product-1.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-1.jpg','.img1')">
+          <img class="img2" src="images/image-product-2.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-2.jpg','.img2')">
+          <img class="img3" src="images/image-product-3.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-3.jpg','.img3')">
+          <img class="img4" src="images/image-product-4.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-4.jpg','.img4')">
         </div>
       </div>
       <div class="container-text">

@@ -1,5 +1,13 @@
-function changeImage(novaImg) {
+function changeImage(novaImg, estiloImg){
     document.getElementById('img-principal').src = novaImg;
+    document.querySelector(estiloImg).style = 'opacity:0.5; border: solid 3px orange';
+    let imgsMiniatura = document.querySelectorAll('#img-miniatura-principal img');
+    imgsMiniatura.forEach(function(img){
+        estiloImg = estiloImg.replace('.','');    
+        if(!img.classList.contains(estiloImg)){
+            img.style = 'opacity: 1; border: none'
+        }
+    })
 }
 
 function changeImageModal(novaImg) {
@@ -46,17 +54,19 @@ try{
         if(valor == 0){
             throw new Error('Valor inválido')
         } else {
-            document.querySelector('.carrinho-vazio').style.display = 'none'
+            // document.querySelector('.carrinho-vazio').style.display = 'none'
+            let valorProduto = Number(document.querySelector('.valor-produto').innerText.replace(/(50%)/, '').replace('R$', ''));
+            let multiplicacao = valorProduto * valor;
             let carrinho = document.querySelector('.carrinho')
-            const img = document.createElement('img');
-            img.src = 'images/image-product-1-thumbnail.jpg'
-            img.classList.add('img-produto-carrinho')
-            carrinho.appendChild(img);
-            console.log(valor)
+            carrinho.classList.add('carrinho-atualizado')
+            carrinho.innerHTML = `<img class='img-produto-carrinho' src=\'images/image-product-1-thumbnail.jpg\'><div style='height:100%; display:flex; flex-direction: column; justify-content: center; gap:10px'><p>Tênis de edição limitada de outono</p><p>R$125 x ${valor} R$${multiplicacao}</p></div><img class='btn-remove' style='width:15px' src='images/icon-delete.svg'>`;
+            let containerCarrinho = document.querySelector('.container-carrinho')
+            if(!document.querySelector('.botao-checkout')){
+                containerCarrinho.innerHTML += '<div class="botao-checkout" style="padding: 0 15px"><button style="cursor:pointer; width:100%; color: black; background: #ff7d1b; font-weight:700; font-size:16px; padding: 15px; border-radius: 5px; border: none;";>Checkout</button></div>'
+            }
         }    
     })
-    
-    
+
 } catch (error){
     console.log(error)
 }

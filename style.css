@@ -41,18 +41,19 @@ header{
 }
 
 .img-produto-carrinho{
-    width: 70px;
+    width: 4.5rem;
+    border-radius: 5px;
 }
 
 .container-carrinho{
     display: none;
     position: absolute;
-    right: 8%;
+    right: 4%;
     top: 14%;
-    width: 30rem;
+    width: 35rem;
     height: 20rem;
     background: white;
-    border-radius: 10px;
+    border-radius: 1rem;
     filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.2));
 }
 
@@ -65,11 +66,23 @@ header{
     align-items: center;
     justify-content: center;
     height: 70%;
-    font-size: 13px;
+    font-size: 1.3rem;
+}
+
+.carrinho-atualizado{
+    padding: 1.5rem;
+    height: 50px;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.carrinho-atualizado p{
+    font-size: 1.4rem;
+    color: #8a8484;
 }
 
 .titulo-carrinho{
-    padding: 1rem;
+    padding: 1.5rem;
     font-size: 1.8rem;
     border-bottom: 1px solid #ccc;
 }
