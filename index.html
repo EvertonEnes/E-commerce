@@ -17,11 +17,11 @@
         <div class="produto-principal produto-modal">
           <img id="img-principal-modal" src="images/image-product-1.jpg" alt="">
         </div>
-        <div class="img-miniatura">
-          <img src="images/image-product-1.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-1.jpg')">
-          <img src="images/image-product-2.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-2.jpg')">
-          <img src="images/image-product-3.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-3.jpg')">
-          <img src="images/image-product-4.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-4.jpg')">
+        <div id="img-miniatura-modal" class="img-miniatura-modal">
+          <div class="div-imgsMiniatura-modal"><img class="img5" src="images/image-product-1 copy.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-1.jpg', '.img5', '.borda5')"></div>
+          <div class="div-imgsMiniatura-modal"><img class="img6" src="images/image-product-2 copy.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-2.jpg', '.img6', '.borda6')"></div>
+          <div class="div-imgsMiniatura-modal"><img class="img7" src="images/image-product-3 copy.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-3.jpg', '.img7', '.borda7')"></div>
+          <div class="div-imgsMiniatura-modal"><img class="img8" src="images/image-product-4 copy.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-4.jpg', '.img8', '.borda8')"></div>
         </div>
       </div>
     </div>
@@ -44,8 +44,8 @@
           </ul>
         </div>
         <div class="cabecalho-final">
-          <img class="icone-carrinho" src="images/icon-cart.svg" alt="carrinho">
-          <img class="img-avatar" src="images/image-avatar.png" alt="Perfil">
+          <div class="qtd-carrinho"><img class="icone-carrinho" src="images/icon-cart.svg" alt="carrinho"><p class="valor-qtd-carrinho"></p></div>
+          <div class="borda-avatar"><img class="img-avatar" src="images/image-avatar.png" alt="Perfil"></div>
         </div>
       </div>
     </header>
@@ -55,10 +55,10 @@
           <img id="img-principal" src="images/image-product-1.jpg" alt="">
         </div>
         <div id="img-miniatura-principal" class="img-miniatura">
-          <img class="img1" src="images/image-product-1.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-1.jpg','.img1')">
-          <img class="img2" src="images/image-product-2.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-2.jpg','.img2')">
-          <img class="img3" src="images/image-product-3.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-3.jpg','.img3')">
-          <img class="img4" src="images/image-product-4.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-4.jpg','.img4')">
+          <div class="div-imgsMiniatura borda1"><img class="img1 imgs" src="images/image-product-1.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-1.jpg','.img1', '.borda1')"></div>
+          <div class="div-imgsMiniatura borda2"><img class="img2 imgs" src="images/image-product-2.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-2.jpg','.img2', '.borda2')"></div>
+          <div class="div-imgsMiniatura borda3"><img class="img3 imgs" src="images/image-product-3.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-3.jpg','.img3', '.borda3')"></div>
+          <div class="div-imgsMiniatura borda4"><img class="img4 imgs" src="images/image-product-4.jpg" alt="Imgagem Tenis" onclick="changeImage('images/image-product-4.jpg','.img4', '.borda4')"></div>
         </div>
       </div>
       <div class="container-text">
