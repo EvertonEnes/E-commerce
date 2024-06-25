@@ -12,10 +12,14 @@
 <body>
     <div class="modal">
       <div class="background-modal"></div>
-      <div class="container-imagens">
+      <div class="container-imagens-modal">
         <img class="btnClose" src="images/icon-close.svg" alt="">
         <div class="produto-principal produto-modal">
-          <img id="img-principal-modal" src="images/image-product-1.jpg" alt="">
+          <div>
+            <img class="btn-voltar" src="images/icon-previous.svg" alt="">
+            <img id="img-principal-modal" src="images/image-product-1.jpg" alt="">
+            <img class="btn-avancar" src="images/icon-next.svg" alt="">
+          </div>
         </div>
         <div id="img-miniatura-modal" class="img-miniatura-modal">
           <div class="div-imgsMiniatura-modal borda5"><img class="img5" src="images/image-product-1.jpg" alt="Imgagem Tenis" onclick="changeImageModal('images/image-product-1.jpg', '.img5', '.borda5')"></div>
@@ -34,14 +38,21 @@
     <header>
       <div class="cabecalho">
         <div class="cabecalho-inicio">
+          <div class="menu-bar">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
           <img class="logo" src="images/logo.svg" alt="">
-          <ul class="menu">
-            <li><p>Collections</p></li>
-            <li><p>Men</p></li>
-            <li><p>Women</p></li>
-            <li><p>About</p></li>
-            <li><p>Contact</p></li>
-          </ul>
+          <div class="nav-menu">
+            <ul class="menu">
+              <li><p>Collections</p></li>
+              <li><p>Men</p></li>
+              <li><p>Women</p></li>
+              <li><p>About</p></li>
+              <li><p>Contact</p></li>
+            </ul>
+          </div>
         </div>
         <div class="cabecalho-final">
           <div class="qtd-carrinho"><img class="icone-carrinho" src="images/icon-cart.svg" alt="carrinho"><p class="valor-qtd-carrinho"></p></div>

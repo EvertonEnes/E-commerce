@@ -1,11 +1,21 @@
+const menu = document.querySelector('.menu-bar');
+const navMenu = document.querySelector('.menu');
+
+menu.addEventListener('click', () => {
+    menu.classList.toggle('ativo')
+    navMenu.classList.toggle('ativo')
+})
+
 function changeImage(novaImg, estiloImg, borda){
     document.getElementById('img-principal').src = novaImg;
     document.querySelector(estiloImg).style.opacity = '0.4'
+    document.querySelector(estiloImg).style.zIndex = '-1'
     let imgsMiniatura = document.querySelectorAll('#img-miniatura-principal img');
     imgsMiniatura.forEach(function(img){
         estiloImg = estiloImg.replace('.','');    
         if(!img.classList.contains(estiloImg)){
             img.style.opacity = '1';
+            img.style.zIndex = 'initial';
         }
     })
 
@@ -22,7 +32,7 @@ function changeImage(novaImg, estiloImg, borda){
 function changeImageModal(novaImgModal, estiloImgModal, bordaModal){
     document.getElementById('img-principal-modal').src = novaImgModal;
     document.querySelector(estiloImgModal).style.opacity = '0.4';
-    document.querySelector(estiloImgModal).style.zIndex = '-1';
+    // document.querySelector(estiloImgModal).style.zIndex = '-1';
     
     let imgsMiniatura = document.querySelectorAll('#img-miniatura-modal img');
     imgsMiniatura.forEach(function(imgModal){
