@@ -27,17 +27,17 @@ header{
 
 .menu-bar .bar{
     display: block;
-    width: 28px;
-    height: 3px;
-    border-radius: 3px;
-    background: black;
-    margin: 5px auto;
+    width: 2.4rem;
+    height: 0.3rem;
+    border-radius: 0.3rem;
+    background: #8a8484;
+    margin: 0.3rem auto;
     transition: all 0.3s;
 }
 
 .menu-bar .bar:nth-child(1),
 .menu-bar .bar:nth-child(3){
-    background: black;
+    background: #8a8484;
 }
 .cabecalho{
     display: flex;
@@ -73,7 +73,7 @@ header{
     display: none;
     position: absolute;
     right: 7%;
-    top: 14%;
+    top: 12%;
     width: 35rem;
     height: 20rem;
     background: white;
@@ -413,7 +413,7 @@ main{
 /* Desktop */
 @media(max-width: 1500px){
     main{
-        gap: 8rem;
+        /* gap: 8rem; */
         height: 84vh;
         overflow: hidden;
     }
@@ -422,7 +422,7 @@ main{
     }
     .container-carrinho{
         right: 5%;
-        top: 16%;
+        top: 9%;
     }
     .container-qtd div {
         width: 15rem;
@@ -436,11 +436,17 @@ main{
         width: 1rem;
         height: 0.4rem;
     }
+    .btn-add{
+        font-size: 1.5rem;
+    }
+    .btn-add img{
+        width: 1.5rem;
+    }
     .menu{
         font-size: 15px;
     }
     .cabecalho-inicio{
-        gap: 6rem;
+        gap: 3rem;
     }
     .cabecalho-final{
         gap: 2rem;
@@ -467,6 +473,145 @@ main{
         font-size: 1.5rem;
     }
 
+}
+
+@media(max-width: 1136px){
+    main{
+        /* gap: 12rem; */
+        height: 89vh;
+        overflow: hidden;
+    }
+    #img-principal{
+        width: 30vw;
+    }
+    .div-imgsMiniatura {
+        width: 6vw;
+    }
+}
+
+@media(max-width: 1087px){
+    main{
+        gap: 7rem;
+        height: 89vh;
+        overflow: hidden;
+    }
+    #img-principal{
+        width: 35vw;
+    }
+    .div-imgsMiniatura {
+        width: 7vw;
+    }
+
+    .menu{
+        position: absolute;
+        left: -100%;
+        top: 0;
+        margin-top: 100px;
+        height: 100%;
+        width: 25%;
+        flex-direction: column;
+        background: white;
+        color: #000;
+        font-weight: 600;
+        transition: 0.3s;
+        gap: 1rem;
+        font-size: 15px;
+    }
+    .menu li{
+        margin-left: 2rem;
+        height: 5%;
+    }
+
+    .menu.ativo{
+        left: 0;
+    }
+
+    .menu-bar{
+        display: block;
+        position: relative;
+    }
+
+    .menu-bar.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg); 
+    }
+    .menu-bar.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu-bar.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media(max-width: 865px){
+    main{
+        flex-direction: column;
+    }
+    .container-carrinho{
+        right: 2%;
+        top: 8%;
+    }
+    .container-qtd div {
+        width: 15rem;
+        padding: 1.3rem 0rem;
+        gap: 2.0rem;
+    }
+    .quantidade{
+        font-size: 1.5rem;
+    }
+    .mais{
+        width: 1rem;
+    }
+    .menos{
+        width: 1rem;
+        height: 0.4rem;
+    }
+    .btn-add{
+        font-size: 1.5rem;
+    }
+    .btn-add img{
+        width: 1.5rem;
+    }
+
+}
+
+/* Mobile */
+@media(max-width: 590px){
+    main{
+        gap: 2rem;
+        height: 100vh;
+        justify-content: initial;
+    }
+    .container-carrinho {
+        width: 90%;
+        right: 25px;
+        top: 10%;
+    }
+    .container-info{
+        width: 90%;
+        padding: 10px 20px;
+    }
+    #img-principal{
+        width: 100%;
+        border-radius: 0;
+    }
+    .img-miniatura{
+        display: none;
+    }
+    .val-promo {
+        margin-bottom: -10px;
+    }
+    .container-qtd {
+        flex-direction: column;
+    }
+    .btn-add{
+        justify-content: center;
+        padding: 1.3rem 0rem;
+        width: 100%;
+    }
+    .container-qtd div{
+        width: 100%;
+        gap: 15rem;
+    }
 }
 
 /* @media(max-width: 1157px){
