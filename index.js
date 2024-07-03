@@ -1,9 +1,12 @@
 const menu = document.querySelector('.menu-bar');
 const navMenu = document.querySelector('.menu');
+const navMenu2 = document.querySelector('.nav-menu');
+
 
 menu.addEventListener('click', () => {
     menu.classList.toggle('ativo')
     navMenu.classList.toggle('ativo')
+    navMenu2.classList.toggle('ativo')
 })
 
 function changeImage(novaImg, estiloImg, borda){
