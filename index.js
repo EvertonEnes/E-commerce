@@ -1,12 +1,13 @@
 const menu = document.querySelector('.menu-bar');
 const navMenu = document.querySelector('.menu');
 const navMenu2 = document.querySelector('.nav-menu');
-
+const back = document.querySelector('.back');
 
 menu.addEventListener('click', () => {
     menu.classList.toggle('ativo')
     navMenu.classList.toggle('ativo')
     navMenu2.classList.toggle('ativo')
+    // back.style = 'display: block;'
 })
 
 function changeImage(novaImg, estiloImg, borda){
@@ -35,8 +36,6 @@ function changeImage(novaImg, estiloImg, borda){
 function changeImageModal(novaImgModal, estiloImgModal, bordaModal){
     document.getElementById('img-principal-modal').src = novaImgModal;
     document.querySelector(estiloImgModal).style.opacity = '0.4';
-    // document.querySelector(estiloImgModal).style.zIndex = '-1';
-    
     let imgsMiniatura = document.querySelectorAll('#img-miniatura-modal img');
     imgsMiniatura.forEach(function(imgModal){
         estiloImgModal = estiloImgModal.replace('.','');    
@@ -61,12 +60,15 @@ carrinho.addEventListener('click', () =>{
     caixaCarrinho.classList.toggle('container-carrinho2');
 })
 
-let imgPrincipal = document.getElementById('img-principal');
-imgPrincipal.addEventListener('click', function(){
-    document.querySelector('.modal').style.display = 'flex';
-    document.querySelector('.icone-carrinho').style = 'z-index: -1'
-    document.querySelector('.valor-qtd-carrinho').style = 'z-index: -1'
-});
+const larguraTela = window.innerWidth;
+if(larguraTela >= 591){
+    let imgPrincipal = document.getElementById('img-principal');
+    imgPrincipal.addEventListener('click', function(){
+        document.querySelector('.modal').style.display = 'flex';
+        document.querySelector('.icone-carrinho').style = 'z-index: -1'
+        document.querySelector('.valor-qtd-carrinho').style = 'z-index: -1'
+    });
+}
 
 let btnClose = document.querySelector('.btnClose');
 btnClose.addEventListener('click', function(){
@@ -83,7 +85,6 @@ try{
         valor += 1;
         quantidade.innerHTML = valor;
     })
-    
     let btnMenos = document.querySelector('.menos');
     btnMenos.addEventListener('click', function(){
         if(valor - 1 < 0 && valor == 0){
@@ -92,8 +93,8 @@ try{
             valor -= 1;
             quantidade.innerHTML = valor;
         }
-    }) 
-    
+    })   
+
     let btnAdd = document.querySelector('.btn-add');
     btnAdd.addEventListener('click', function(){
         if(valor == 0){
@@ -122,10 +123,7 @@ try{
                 qtdCarrinho.innerHTML = ''
             })
         } 
-
     })
-
-
 } catch (error){
     console.log(error);
 }
